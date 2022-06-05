@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
+
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+    <style>
+        @import url(/css/reset.css);
+        .wrap {
+            width: 1280px;
+            height: 110px;
+            display: flex;
+            align-items: center;
+            margin: 0 auto;
+        }
+
+        .logo {
+            background: url('../G마켓/IMG/sprite__common.png') no-repeat 0 -152px;
+            width: 255px;
+            height: 69px;
+        }
+
+        #search {
+            position: relative;
+        }
+
+        .search {
+            width: 600px;
+            border: 3px solid #067DFD;
+            height: 50px;
+            border-radius: 50px;
+            margin: auto 30px;
+
+        }
+
+        .search-btn {
+            background: url('../G마켓/IMG/sprite__common.png') no-repeat -755px -62px;
+            width: 26px;
+            height: 25px;
+            position: absolute;
+            right: 7%;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
+        .util {
+            display: flex;
+            margin: 0 30px;
+        }
+
+        .util li {
+            margin: 0 10px;
+        }
+
+        .mypage>a {
+            display: block;
+            background: url('../G마켓/IMG/sprite__common.png') no-repeat -604px -156px;
+            width: 55px;
+            height: 55px;
+            text-indent: -9999px;
+            font-size: 0;
+
+
+        }
+
+        .recent>a {
+            display: block;
+            background: url('../G마켓/IMG/sprite__common.png') no-repeat -679px -154px;
+            width: 59px;
+            height: 59px;
+            text-indent: -9999px;
+            font-size: 0;
+        }
+
+        .cart>a {
+            display: block;
+            background: url('../G마켓/IMG/sprite__common.png') no-repeat -675px -82px;
+            width: 68px;
+            height: 64px;
+            text-indent: -9999px;
+            font-size: 0;
+        }
+
+        .menu {
+            display: flex;
+            margin: auto;
+            width: 1280px;
+            position: relative;
+        }
+
+        .vertical-menu {
+            background-color: #0ABB26;
+            border: 1px solid #0ABB26;
+            color: white;
+            width: 179px;
+            text-align: left;
+            font-weight: bold;
+            position: absolute;
+            left: 204px;
+            z-index: 12121;
+            position: absolute;
+            left: 0;
+            top: 60px;
+        }
+
+        .vertical-menu li {
+            height: 50px;
+            border-bottom: 1px solid #fff;
+            line-height: 50px;
+            padding-left: 20px;
+        }
+
+
+        .hori-menu {
+            height: 60px;
+        }
+
+        .menu .hori-menu ul {
+            display: flex;
+            height: 60px;
+            line-height: 60px;
+            text-align: center;
+            font-weight: bold;
+            justify-content: center;
+            align-items: center;
+            font-size: 18px;
+        }
+
+        .menu .hori-menu ul li {
+            width: 150px;
+        }
+
+        .menu .hori-menu ul li:first-child {
+            background-color: rgb(16, 175, 41);
+            width: 180px;
+            color: white;
+            font-weight: bold;
+            height: 60px;
+        }
+
+        .banner {
+            width: 960px;
+            height: 400px;
+            margin: auto;
+        }
+    </style>
+</head>
+
+
+<body>
+    <header>
+        <div class="wrap">
+            <div class="logo"></div>
+            <div id="search">
+                <input class="search" type="search" name="search"><label for="search"></label>
+                <div class="search-btn"></div>
+            </div>
+            <div class="util-wrap">
+                <ul class="util">
+                    <li class="mypage"><a href="#">마이페이지</a></li>
+                    <li class="recent"><a href="#">최근</a></li>
+                    <li class="cart"><a href="#">카트</a></li>
+                </ul>
+            </div>
+        </div>
+    </header>
+    <div>
+        <div class="menu">
+            <div class="hori-menu">
+                <ul>
+                    <li><a href="">전체카테고리</a></li>
+                    <li><a href="">베스트</a></li>
+                    <li><a href="">슈퍼딜</a></li>
+                    <li><a href="">쿠폰출첵</a></li>
+                    <li><a href="">스마일배송</a></li>
+                    <li><a href="">스마일클럽</a></li>
+                    <li><a href="">스마일클럽비즈</a></li>
+                </ul>
+            </div>
+            <div class="vertical-menu">
+                <ul>
+                    <li><a href="">브랜드패션</a></li>
+                    <li><a href="">패션의류잡화</a></li>
+                    <li><a href="">유아동</a></li>
+                    <li><a href="">식품생필품</a></li>
+                    <li><a href="">홈데코문구</a></li>
+                    <li><a href="">컴퓨터디지털가전</a></li>
+                    <li><a href="">스포츠건강렌탈</a></li>
+                    <li><a href="">자동차공구</a></li>
+                    <li><a href="">여행도서</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="banner">
+        <div class="swiper">
+            <div class="swiper-wraper">
+                <div class="swiper-slide"><img src="G마켓/IMG/banner01.jpg" alt=""></div>
+                <div class="swiper-slide"><img src="G마켓/IMG/banner02.jpg" alt=""></div>
+                <div class="swiper-slide"><img src="G마켓/IMG/banner03.jpg" alt=""></div>
+                <div class="swiper-slide"><img src="G마켓/IMG/banner04.jpg" alt=""></div>
+                <div class="swiper-slide"><img src="G마켓/IMG/banner05.jpg" alt=""></div>
+            </div>
+            <div class="swiper-pagination"></div>
+
+            <div class="swiper-btn-prev"></div>
+            <div class="swiper-btn-next"></div>
+
+            <div class="swiper-scrollbar"></div>
+
+        </div>
+    </div>
+    <script>
+        const swiper = new Swiper('.banner .swiper',{
+            speed: 400,
+            spacebetween: 100,
+            loop: true,
+            pagination: {
+                el: '.swiper-pagination',
+            },
+
+            // Navigation arrows
+            navigation: {
+                nextEl: '.swiper-btn-next',
+                prevEl: '.swiper-btn-prev',
+            },
+        });
+    </script>
+
+</body>
+
+</html>

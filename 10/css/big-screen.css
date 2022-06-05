@@ -1,0 +1,5 @@
+.big-screen-text{width: 100vw;height: 100vh; position: fixed;top: 0;left: 0;z-index: 10000;font-weight: 600; font-size: 30px;;justify-content: center; align-items: center;background-color: #ffe94a ;display: none;}
+
+/* @media screen and (min-width:700px) {.big-screen-text{display: flex;} */
+    
+}

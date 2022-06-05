@@ -1,0 +1,56 @@
+/* @mixin btn-basic($bgcolor,$size){
+    font-size:$size;
+    padding: 40px;
+    color: #fff;
+    background-color: $bgcolor;
+    text-decoration: none;
+    text-align: center;
+    line-height: 100px
+
+}
+
+.btn1{
+    @include btn-basic(#900,50px);
+}
+.btn2{
+    @include btn-basic(#688,10px)
+}
+.btn3{
+    @include btn-basic(#390,30px)
+}
+ */
+body {
+  display: flex;
+}
+
+.box, .box8, .box7, .box6, .box5, .box4, .box3, .box2, .box1 {
+  width: 500px;
+  height: 150px;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 50px;
+  background-color: skyblue;
+  border: 5px solid rosybrown;
+}
+
+.box1 {
+  border-radius: 10px;
+}
+
+.box2 {
+  border-radius: 20px;
+}
+
+.box3 {
+  border-radius: 100%;
+}
+
+.box4 {
+  border-radius: 20px 0;
+}
+
+.box5 {
+  border-radius: 100% 0 0 0;
+}/*# sourceMappingURL=01.css.map */

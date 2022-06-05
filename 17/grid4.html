@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .wrap {
+            border: 5px solid #333;
+            padding: 5px;
+            background-color: wheat;
+            display: grid;
+            /* grid-template-columns: repeat(3,1fr); */
+             /* grid-template-columns: 1fr minmax(200px,auto)최소 200px 최대는 auto 1fr;  */
+             /* grid-template-columns: min-content 1fr 1fr; */
+             grid-template-columns: repeat(auto-fill,minmax(300px,1fr));
+
+             /* auto-fill auto-fit; */
+        }
+        .wrap>div{background-color: lightcoral; padding: 5px; margin: 5px;}
+        .wrap>div>img{width: 100%;}
+    </style>
+</head>
+
+<body>
+    <div class="wrap">
+        <div><img src="img/client-01.jpg" alt=""></div>
+        <div>2</div>
+        <div>3</div>
+        <div>새야 새야 소쩍새야 어딜 그리 가느냐 디디의우산 두개골의 안과밖 제22회 젊은작가상 수상집</div>
+        <div><img src="img/client-05.jpg" alt=""></div>
+        <div>6</div>
+    </div>
+</body>
+
+</html>

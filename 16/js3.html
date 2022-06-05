@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function Student(a,b){
+            this.name = a;
+            this.name = b;
+        }
+        Student.prototype.address='korea'
+        var student1 = new Student('lee',20)
+        var student2 = new Student('kim',30)
+
+        console.log(student1.address) // 1. 내가 address 값을 가지고 있는지 검사 2. 부모의 원형 prototype을 검사 3. 부모의 부모 탐색 ... 
+        console.log(Student.prototype)
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+main{animation: mainPopIn .5s ease-in-out}
+
+@keyframes mainPopIn {from{opacity: 0%;transform: translateY(10px);} to{opacity: 1; transform: none;}}
+
+.more{width: 100%;}
+.more-header{display: flex; width: 100%;justify-content: space-between;margin: 20px 10px;}
+.more-header-column{display: flex;}
+.more-header img{width: 80px; border-radius: 50%;margin-top: 10px;}
+.more-header-info{display: flex;flex-direction: column;justify-content: center; margin-left: 10px;}
+.more-header i{display: flex; align-items: center; margin-right: 20px;}
+
+.more-options{display: flex; justify-content: space-between;color:#523737}
+.more-options .more-option-list{display: flex; flex-direction: column; align-items: center;margin-top: 30px;padding:0 10px;}
+.more-option-list span{padding-bottom: 10px;padding-top: 10px;}
+
+.more-plus-friends h2{font-size: 20px;}
+.more-plus-friends .more-pf-header{display: flex; justify-content: space-between; padding:20px 15px;}
+.more-plus-friends .more-pf-items{display: flex; flex-wrap: wrap;justify-content: space-around;}
+.more-pf-header .more-pf-learnmore{color: lightgray;}
+.more-pf-item{width: 50%; justify-content: space-between; padding: 15px 20px; font-size: 16px;}
+.more-pf-item i{padding-right: 20px;}
+
+.more-links{display: flex;margin-top: 30px;}
+.more-link-item img{width: 50px;}
+.more-link-item{display: flex; flex-direction: column; align-items: center; padding: 20px 15px;}
+.more-link-item span{padding-top: 10px;}

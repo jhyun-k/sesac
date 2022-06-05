@@ -1,0 +1,46 @@
+$size-long : 100px;
+$size-small : 50px;
+$f-color : #fff;
+$br-5: 5px;
+$mt50: 50px;
+
+.forflex{display: flex; margin: auto;}
+
+.box{
+    width: $size-long;
+    height: $size-small;
+    color: #fff;
+    border-radius: $br-5;
+    margin: $mt50;
+    text-align: center;
+    line-height: $size-small
+
+ 
+}
+
+.box1{
+    @extend .box; 
+    background-color: red;
+}
+.box2{
+    @extend .box; 
+    background-color: blue;
+} 
+
+.box3{
+    @extend .box; 
+    background-color: green;
+}
+.box4{
+    @extend .box; 
+    background-color: yellow;
+}
+.box5{
+    @extend .box; 
+    background-color: skyblue;
+}
+.box6{
+    @extend .box; 
+    background-color: pink;
+} 
+

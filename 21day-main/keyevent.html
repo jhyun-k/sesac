@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .face {
+            transition: all 0.25s;
+            width: 290px;
+            height: 290px;
+            background: url(img/KakaoTalk_20210414_164749763.jpg) no-repeat;
+            background-size: contain;
+            border-radius: 50%;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="face"></div>
+</body>
+<script>
+    const face = document.querySelector('.face')
+    let leftvalue = window.getComputedStyle(face).left
+    leftvalue = parseInt(leftvalue);
+    let topvalue = window.getComputedStyle(face).left
+    topvalue = parseInt(topvalue);
+    console.log(leftvalue + '\n' + topvalue)
+
+    window.addEventListener('keydown', (e) => {
+        if (e.keyCode == '37') {
+            leftvalue -= 30;
+            face.style.left = `${leftvalue}px`
+        } else if (e.keyCode == '39') {
+            leftvalue += 30;
+            face.style.left = `${leftvalue}px`
+        } else if (e.keyCode == '38') {
+            topvalue -= 15;
+            face.style.top = `${topvalue}px`
+        } else if (e.keyCode == '40') {
+            topvalue += 30;
+            face.style.top = `${topvalue}px`
+        }
+        console.log(e)
+
+
+    })
+
+
+    //keydown은 누를 때, keyup은
+    //parseInt 정수화 시키기 (단위도 없앰)
+</script>
+
+</html>

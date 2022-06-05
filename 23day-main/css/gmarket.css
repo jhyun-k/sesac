@@ -1,0 +1,90 @@
+    @import url(/css/reset.css);
+    
+
+
+    .wrap {
+        width: 1280px;
+        height: 110px;
+        display: flex;
+        align-items: center;
+        margin: 0 auto;
+    }
+
+    .logo {
+        background: url('../G마켓/IMG/sprite__common.png') no-repeat 0 -152px;
+        width: 255px;
+        height: 69px;
+    }
+
+    #search {
+        position: relative;
+    }
+
+    .search {
+        width: 600px;
+        border: 3px solid #067DFD;
+        height: 50px;
+        border-radius: 50px;
+        margin: auto 30px;
+
+    }
+
+    .search-btn {
+        background: url('../G마켓/IMG/sprite__common.png') no-repeat -755px -62px;
+        width: 26px;
+        height: 25px;
+        position: absolute;
+        right: 7%;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+    .util {display: flex; margin: 0 30px;}
+
+    .util li {
+        margin: 0 10px;
+    }
+
+    .mypage>a {
+        display: block;
+        background: url('../G마켓/IMG/sprite__common.png') no-repeat -604px -156px;
+        width: 55px;
+        height: 55px;
+        text-indent: -9999px;
+        font-size: 0;
+
+
+    }
+
+    .recent>a {
+        display: block;
+        background: url('../G마켓/IMG/sprite__common.png') no-repeat -679px -154px;
+        width: 59px;
+        height: 59px;
+        text-indent: -9999px;
+        font-size: 0;
+    }
+
+    .cart>a {
+        display: block;
+        background: url('../G마켓/IMG/sprite__common.png') no-repeat -675px -82px;
+        width: 68px;
+        height: 64px;
+        text-indent: -9999px;
+        font-size: 0;
+    }
+
+    .menu{display: flex; margin: auto; width: 1280px;position: relative;}
+    .vertical-menu{background-color: #0ABB26; border: 1px solid #0ABB26; color: white; width: 179px; text-align: left; font-weight: bold;position: absolute; left: 204px;  z-index: 12121;position: absolute; left: 0; top: 60px;}
+    .vertical-menu li{height: 50px; border-bottom: 1px solid #fff; line-height: 50px; padding-left: 20px;}
+  
+    
+    .hori-menu{height: 60px;}
+    .menu .hori-menu ul{display: flex; height: 60px; line-height: 60px; text-align: center; font-weight: bold;justify-content: center; align-items: center; font-size: 18px;}
+    .menu .hori-menu ul li{width: 150px;}
+    .menu .hori-menu ul li:first-child{background-color: rgb(16,175,41); width: 180px; color: white; font-weight: bold; height: 60px;}
+    
+    .banner {
+        width: 960px;
+        height: 400px; margin: auto;
+    }

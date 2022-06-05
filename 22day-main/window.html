@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+        console.log(window) // window 는 전역객체 , javascript 가장 위에 있는 객체
+
+
+        window.addEventListener('DOMContetnLoaded',()=>{
+            console.log('돔의 컨텐츠가 다 읽어진 후 ')  
+        })
+        Document.addEventListener('DOMContetnLoaded',()=>{
+            console.log('돔의 컨텐츠가 다 읽어진 후 ')
+        })
+       
+        window.addEventListener('load',()=>{
+            console.log('모든 리소스가 다 읽어온 후 ')
+        })
+    </script>
+</body>
+
+</html>

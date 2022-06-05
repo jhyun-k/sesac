@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <style>
+        /* 공통디자인 */
+        
+        header{width: 100%;}
+        header h1{background-color: cornflowerblue; color: aliceblue; font-size: 30px; text-align: center; font-weight: 700; height: 40px; line-height: 40px;width: 100%;}
+        header nav{background-color: rgb(172, 162, 236);  height: 40px; line-height: 40px; margin-top: 10px; display: flex; flex-wrap: wrap;width: 100%;  }
+        header nav a{border: 1px solid white; padding: 0 40px; border-top: none;}
+
+
+        main{padding: 10px; display: flex;width: 100%; margin: auto; flex-wrap: wrap}
+        main section{flex:25%;display: flex;flex-direction: column;}
+        main aside{flex:75%;}
+
+        main section div{height: 200px; background-color: darksalmon; margin: 10px;width: 100%;}
+        main section div h2{font-size: 20px; font-weight: 700; padding: 10px;}
+        main section div p{padding:5px 10px;}
+
+        main aside div{border-bottom: 1px solid brown; margin: 30px ;}
+        main aside div h3{font-weight: 700; font-size: 18px;}
+        main aside div p{font-size: 16px; line-height: 1.5;}
+
+        footer{text-align: center;}
+
+        /*1024~640*/
+
+        @media screen and (min-width : 640px) and (max-width : 1024px) {
+        main{width: 95%;}
+        main section{flex: 100%; display: flex;flex-direction: row;} 
+        main section div{width: 100%;}
+        main aside{flex:100%;}
+        }
+
+        @media screen and (max-width:639px) {main{width: 95%;} header{height: 200px; margin: auto} header nav{background-color: transparent; height: 0; position: absolute; right: 50%; transform: translateX(50%);padding: 0;} nav a{background-color: rgb(172, 162, 236); width: 100vw; text-align: center;}
+        main section{flex:100%} main section div{height:150px; width: 95%;} .inner{width: 95%;}
+        }
+
+
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <header>
+            <h1>웹디자인</h1>
+            <nav>
+                <a href="#">Menu1</a>
+                <a href="#">Menu2</a>
+                <a href="#">Menu3</a>
+            </nav>
+        </header>
+        <main class="inner">
+            <section class="section">
+                <div>
+                    <h2>제목</h2>
+                    <p>내용입니다</p>
+                </div>
+                <div>
+                    <h2>제목</h2>
+                    <p>내용입니다</p>
+                </div>
+            </section>
+            <aside>
+                <div>
+                    <h3>제목</h3>
+                    <p>내용입니다내용입니다내용입니다내용입니다내용입니다내용입니다내용입니다내용입니다내용입니다내용입니다내용입니다내용입니다내용입니다내용입니다내용입니다내용입니다내용입니다내용입니다내용입니다내용입니다내용입니다내용입니다</p>
+                </div>
+                <div>
+                    <h3>제목</h3>
+                    <p>내용입니다내용입니다내용입니다내용입니다내용입니다내용입니다내용입니다내용입니다내용입니다내용입니다내용입니다내용입니다내용입니다내용입니다내용입니다내용입니다내용입니다내용입니다내용입니다내용입니다내용입니다내용입니다</p>
+                </div>
+                <div>
+                    <h3>제목</h3>
+                    <p>내용입니다내용입니다내용입니다내용입니다내용입니다내용입니다내용입니다내용입니다내용입니다내용입니다내용입니다내용입니다내용입니다내용입니다내용입니다내용입니다내용입니다내용입니다내용입니다내용입니다내용입니다내용입니다</p>
+                </div>
+                <div>
+                    <h3>제목</h3>
+                    <p>내용입니다내용입니다내용입니다내용입니다내용입니다내용입니다내용입니다내용입니다내용입니다내용입니다내용입니다내용입니다내용입니다내용입니다내용입니다내용입니다내용입니다내용입니다내용입니다내용입니다내용입니다내용입니다</p>
+                </div>
+                <div>
+                    <h3>제목</h3>
+                    <p>내용입니다내용입니다내용입니다내용입니다내용입니다내용입니다내용입니다내용입니다내용입니다내용입니다내용입니다내용입니다내용입니다내용입니다내용입니다내용입니다내용입니다내용입니다내용입니다내용입니다내용입니다내용입니다</p>
+                </div>
+                <div>
+                    <h3>제목</h3>
+                    <p>내용입니다내용입니다내용입니다내용입니다내용입니다내용입니다내용입니다내용입니다내용입니다내용입니다내용입니다내용입니다내용입니다내용입니다내용입니다내용입니다내용입니다내용입니다내용입니다내용입니다내용입니다내용입니다</p>
+                </div>
+            </aside>
+        </main>
+        <footer>
+            <p>2014.website</p>
+        </footer>
+    </div>
+</body>
+</html>

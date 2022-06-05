@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @import url(css/reset.css);
+
+        .mario-world {
+            width: 50%;
+            margin: auto;
+            background: url(img/mario/bg.png) center center no-repeat;
+            background-size: contain;
+            text-align: center;
+        }
+
+        .icon {
+            display: flex;
+            justify-content: center;
+        }
+
+        .pipe {
+            display: flex;
+            justify-content: center;
+        }
+
+        
+
+        .pipe-list {
+            background: url(img/mario/pipe-white.png) no-repeat;
+            width: 200px;
+            height: 100px;
+            background-size: 200px 100px;
+        }
+
+        .pipe-list-active {
+            background-color: beige;
+            background: url(img/mario/pipe.png)no-repeat;
+            width: 200px;
+            height: 100px;
+            background-size: 200px 100px;
+        }
+
+        .banner {
+            display: flex; justify-content: center;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="mario-world">
+        <h1><img src="img/mario/logo.png" alt=""></h1>
+        <div>
+            <div>
+                <ul class="banner">
+                    <li class="banner-list list-active" data-tabnum='0'><img src="img/mario/page01.png" alt=""></li>
+                    <li class="banner-list" data-tabnum='1'><img src="img/mario/page02.png" alt=""></li>
+                    <li class="banner-list" data-tabnum='2'><img src="img/mario/page03.png" alt=""></li>
+                </ul>
+            </div>
+            <ul class="icon">
+                <li class="icon-list list-active"><img src="img/mario/icon01.png" alt=""></li>
+                <li class="icon-list"><img src="img/mario/icon02.png" alt=""></li>
+                <li class="icon-list"><img src="img/mario/icon03.png" alt=""></li>
+            </ul>
+        </div>
+        <div>
+            <ul class="pipe">
+                <li class="pipe-list list-active" data-tabnum='0'></li>
+                <li class="pipe-list" data-tabnum='1'></li>
+                <li class="pipe-list" data-tabnum='2'></li>
+            </ul>
+        </div>
+        
+    </div>
+    <script>
+        const pipeList = document.querySelectorAll('.pipe-list');
+        
+        pipeList.forEach((pList) => {
+            pList.addEventListener('click', (e) => {
+                const icon = document.querySelectorAll('.icon-list');
+                let tabNum = e.currentTarget.getAttribute('data-tabnum')
+                console.log(tabNum)
+
+                //전체off
+
+                icon.forEach((contentele, index) => {
+                    contentele.style.display = 'block';
+                    pipeList[index].className = 'pipe-list'
+                })
+                //해당요소만 on
+                icon[tabNum].style.display = 'block'
+                if (pList.className.indexOf('pipe-list-active') == -1) {
+                    pList.className = 'pipe-list pipe-list-active'
+                }
+            })
+        })
+        pipeList.forEach((pList) => {
+            pList.addEventListener('click', (e) => {
+                const banner = document.querySelectorAll('.banner-list');
+                let tabNum = e.currentTarget.getAttribute('data-tabnum')
+                console.log(tabNum)
+
+                //전체off
+
+                banner.forEach((contentele, index) => {
+                    contentele.style.display = 'none';
+                    pipeList[index].className = 'pipe-list'
+                })
+                
+                //해당요소만 on
+                banner[tabNum].style.display = 'block'
+                if (pList.className.indexOf('pipe-list-active') == -1) {
+                    pList.className = 'pipe-list pipe-list-active'
+                }
+            })
+        })
+
+
+    </script>
+</body>
+
+</html>

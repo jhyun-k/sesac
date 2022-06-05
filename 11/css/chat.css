@@ -1,0 +1,51 @@
+.chat-header{
+    background-color:rgb(161, 192, 213);
+    color: #000;
+    padding: 5px 10px 15px;
+    position: fixed;top:0;z-index: 1000;
+    width: 100%;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    
+}
+.chat-header-top,.header-bottom{
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.chat-header .header-column{width: 33%;}
+.chat-header .header-column:nth-child(2){text-align: center;}
+.chat-header .header-column:last-child{text-align: right;}
+
+.chat-header .header-top{font-size: 12px;margin-bottom: 15px;}
+.chat-header .header-bottom{margin: 0 10px;}
+.chat-header .header-bottom .header-column:first-child{
+    color:rgba(255,255,255,0.5);cursor: pointer;
+}
+
+.chat-header .header-number{color:#ffe94a}
+
+
+.body-chat{background-color: rgb(161, 192, 213);}
+p{height: 20px; color: #000; line-height: 20px; text-align: center; padding-top: 10px;}
+
+.my{display: flex; justify-content: flex-end;align-items: flex-end;}
+.my .my-messeages{display: flex; flex-direction: column;align-items: flex-end; line-height: 40px;}
+.my .my-chat-messeage{border: 1px solid transparent;width: auto;height:40px;background-color: #ffe94a; margin: 5px 10px; border-radius: 5px;padding:0 5px;}
+.my .my-time{font-size: 12px;}
+
+.your{margin-top: 0px;}
+.messeage-img img{width: 40px;height: auto; border-radius: 50%;position: relative; margin-left: 10px;}
+.your{display: flex;align-items: flex-end;}
+.your .your-messeages{display: flex; flex-direction: column;align-items: flex-start;line-height: 40px;position: absolute;left: 50px; bottom: 280px;}
+.your .your-messeages .your-chat-messeage{border: 1px solid transparent; background-color: #fff;border-radius: 5px; margin: 5px 10px; padding: 0 5px;height: 40px;}
+.your-time{font-size: 12px; position: absolute; right: 120px; bottom: 300px;}
+
+
+footer .dialog{display: flex; justify-content: space-between; background-color: lightgray;width: 100%;position: absolute;bottom: 0; padding: 5px;}
+.type-messeage-input input{height: 40px; width: 400px;}
+footer .dialog .plus{color: gray; text-align: center; line-height: 40px; padding-left: 15px;}
+
+footer .type-messeage-input .smile{position: absolute; right: 65px;line-height: 40px;color: gray;}
+.record-messeage{border: 1px solid #ffe94a; background-color: #ffe94a;line-height: 40px; text-align: center; }
+.record-messeage i{border: 1px solid #ffe94a; background-color: #ffe94a; width: 40px; height: 40px;line-height: 40px; text-align: center;}

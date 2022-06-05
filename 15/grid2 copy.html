@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container {
+            border: 5px solid #000;
+            width: 900px;
+            height: 300px;
+            background-color: aquamarine;
+            display: grid;
+            justify-content: center;
+            align-content: center;
+            
+        }
+
+        .container>div {
+            width: 100px;
+            height: 100px;
+            background-color: seagreen;
+            border: 2px solid #fff;
+            grid-template-columns: auto auto auto;
+        }
+
+        .container1 {
+            
+        }
+
+        .container2 {
+            
+        }
+
+        .container3 { 
+
+        } 
+
+
+    </style>
+</head>
+
+<body>
+    <div class="container1 container">
+        <div>center center</div>
+        <div>2</div>
+    </div>
+    <div class="container2 container">
+        <div>end end</div>
+        <div>2</div>
+    </div>
+    <div class="container3 container">
+        <div>stretch stretch</div>
+        <div>2</div>
+    </div>
+</body>
+
+</html>

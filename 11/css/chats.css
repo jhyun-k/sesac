@@ -1,0 +1,11 @@
+.search-bar{border-bottom: 1px solid #eeeeee;}
+
+.messeage-items img{width: 60px; border-radius: 50%; margin-bottom: 10px;}
+.messeage-items{display: flex; align-items: center; margin: 10px;border-bottom: 1px solid #eeeeee;}
+.messeage-item{display: flex; flex-direction: column;}
+.messeage-item b{font-size: 16px; margin-bottom: 10px;}
+.messeage-item span{padding-bottom: 10px;}
+.messeage-item span:nth-child(2){color: rgb(170, 167, 167); font-size: 14px;}
+.hello{display: flex;justify-content: flex-start;}
+.messeage-align{display: flex;justify-content: space-between;width: 100%; padding: 0 20px; }
+p{color: rgb(170, 167, 167); font-size: 12px;}

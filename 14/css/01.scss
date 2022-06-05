@@ -1,0 +1,90 @@
+$main-color : #900;
+$sub-color : #365;
+$basic-g-color1 : #999;
+$basic-g-color2 : #666;
+$basic-g-color3 : #333;
+$basic-g-color4 : #000;
+$basic-w-color : #fff;
+$size-lg : 500px;
+$size-md : 300px;
+$size-sm:150px;
+$size-xm : 50px ;
+$mt50 : 50px;
+
+/* @mixin btn-basic($bgcolor,$size){
+    font-size:$size;
+    padding: 40px;
+    color: #fff;
+    background-color: $bgcolor;
+    text-decoration: none;
+    text-align: center;
+    line-height: 100px
+
+}
+
+.btn1{
+    @include btn-basic(#900,50px);
+}
+.btn2{
+    @include btn-basic(#688,10px)
+}
+.btn3{
+    @include btn-basic(#390,30px)
+}
+ */
+
+ body{display: flex;}
+
+.box{
+    width: $size-lg ;
+    height: $size-sm;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: $mt50;
+    background-color: skyblue;
+    border: 5px solid rosybrown
+}
+    
+
+
+.box1 {
+    @extend .box;
+    border-radius: 10px
+    
+}
+
+.box2 {
+    @extend .box;
+    border-radius: 20px
+   
+}
+
+.box3{
+    @extend .box;
+    border-radius: 100%
+}
+
+.box4{
+    @extend .box;
+    border-radius: 20px 0 
+}
+
+.box5{
+    @extend .box;
+    border-radius: 100% 0 0 0
+}
+
+.box6{
+    @extend .box;
+}
+
+.box7{
+    @extend .box;
+}
+
+.box8{
+    @extend .box;
+}
+    

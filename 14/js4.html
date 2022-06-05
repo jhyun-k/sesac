@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!--아이디와 비밀번호를 입력 받고 아이디가 sesac, 비밀번호가 001인 경우에만 로그인 되었습니다 출력, 아닌 경우 로그인 정보가 일치하지 않습니다. 출력-->
+
+    <script>
+        let id = prompt('아이디를 입력해주세요')
+        if (id == 'sesac') {
+            let pw = prompt('비밀번호를 입력해주세요')
+            if (pw == 001) {
+                console.log('로그인 되었습니다.')
+            }
+        } else {
+            console.log('로그인 정보가 일치하지 않습니다.')
+        }
+    </script>
+
+</body>
+
+</html>

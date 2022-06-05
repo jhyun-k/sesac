@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        p {
+            display: none;
+        }
+
+        p.on {
+            display: block;
+        }
+
+        li {
+            color: #000;
+        }
+
+        li.on {
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="tab-title">
+        <ul id="tab-list">
+            <li class="on" data-tab="1">
+                탭1번 제목
+            </li>
+            <li data-tab="2">
+                탭2번 제목
+            </li>
+        </ul>
+    </div>
+    <div class="tab-content">
+        <p class="on" data-content="1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas quibusdam,
+            rerum commodi inventore eum sapiente, cum molestias cumque alias, itaque quos debitis quia exercitationem
+            nobis. Suscipit quasi eaque dolore nostrum.</p>
+        <p data-content="2">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Velit voluptatibus, quia assumenda
+            culpa expedita, illum quasi doloremque vel consequuntur ea labore accusantium error aliquam enim beatae!
+            Excepturi natus fuga libero. 2번2번</p>
+    </div>
+    <script>
+        const tabs = document.querySelectorAll('#tab-list>li')
+        const contents = document.querySelectorAll('.tab-content>p')
+        const on = 'on'
+
+        function init() {
+            tabs.forEach((tab) => {
+                tab.addEventListener('click', (e) => {
+                    let select = e.target.dataset.tab;
+                    updateTitle(tab)
+                    updateContent(select)
+                })
+            })
+
+        } // init 함수
+
+        function updateTitle(select) {
+            tabs.forEach((tab) => {
+                tab.classList.remove(on)
+            })
+            select.classList.add(on)
+        }
+
+        function updateContent(select){
+            contents.forEach((content)=>{
+                content.classList.remove(on)
+                let data = content.dataset.content;
+                if(data === select ){
+                content.classList.add(on)}
+            })
+                
+        }
+
+        init();
+    </script>
+</body>
+
+</html>

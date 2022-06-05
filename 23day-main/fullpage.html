@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @import url(css/reset.css);
+
+        html,
+        body {height: 100%;
+        }
+
+        #menuBar{position: fixed;z-index: 1000;left:100px;top: 60%;transform: translateY(-50%);}
+        #menuBar .gnb li{height: 60px;line-height: 60px;font-size: 40px;opacity: .5;font-family: 'arial';color:#fff;transition:all 0.35s;cursor: pointer;}
+        #menuBar .gnb li.on{opacity: 1;font-weight: bold}
+        #menuBar .gnb li:hover{opacity: 1;font-weight: bold}
+        .section {
+            background-size: cover;
+            background-position: center top;
+            height: 100vh;
+        }
+
+        .s1 {background-image: url(img/fullpage/01.png);
+        }
+
+        .s2 {background-image: url(img/fullpage/02.png);
+        }
+
+        .s3 {background-image: url(img/fullpage/03.png);
+        }
+
+        .s4 {background-image: url(img/fullpage/04.png);
+        }
+
+        .s5 {background-image: url(img/fullpage/05.png);
+        }
+
+        .s6 {background-image: url(img/fullpage/06.png);
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <div id="menuBar">
+            <ul class="gnb">
+                <li><a href="#">Section1</a></li>
+                <li><a href="#">Section2</a></li>
+                <li><a href="#">Section3</a></li>
+                <li><a href="#">Section4</a></li>
+                <li><a href="#">Section5</a></li>
+                <li><a href="#">Section6</a></li>
+            </ul>
+        </div>
+        <div class="section s1" data-index="0"></div>
+        <div class="section s2" data-index="1"></div>
+        <div class="section s3" data-index="2"></div>
+        <div class="section s4" data-index="3"></div>
+        <div class="section s5" data-index="4"></div>
+        <div class="section s6" data-index="5"></div>
+    </div>
+    <script>
+        const section = document.querySelectorAll('.section')
+        const li = document.querySelectorAll('.gnb li')
+        
+
+        const callbackFnc = (entries)=>{
+            console.log(entries)
+            entries.forEach((ele)=>{
+                const index = ele.target.dataset.index;
+                li.forEach(ele=>ele.classList.remove('on'))
+                
+                if(window.scrollY === 0){
+                    li[0].classList.add('on')
+                }else{
+                    li[index].classList.add('on');
+                }
+               
+
+            })
+            
+        }
+
+        const option = {
+            threshold : 0.6
+        }
+
+        const scrollObserver = new IntersectionObserver(callbackFnc,option)
+
+        section.forEach(sectionEle=>scrollObserver.observe(sectionEle))
+        
+     
+     
+     
+     
+     
+     
+     /*    const gnb = document.querySelector('.gnb')
+        const list = document.querySelectorAll('.gnb li')
+        const section = document.querySelectorAll('.section')
+
+
+
+        gnb.addEventListener('click', (e) => {
+            const index = e.target.dataset.index;
+            const targetPos = section[index].getBoundingClientRect().top;
+            window.scrollBy(0, targetPos);
+            console.log(e)
+        })
+
+        const observerFnc = function (entries) {
+            entries.forEach((ele) => {
+                if (ele.isIntersection) {
+                    ele.target.classList.add('on')
+                } else {
+                    ele.target.classList.remove('on')
+                }
+            })
+
+        }
+        const observerObject = new IntersectionObserver(observerFnc);
+        section.forEach((ele) => {
+            observerObject.observe(ele)
+        }) */
+    </script>
+</body>
+
+</html>

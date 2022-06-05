@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <img src="img/mario/icon03.png" alt="마리오" id="img" class="himushroom" data-num='0' data-name="img1">
+    <!--  id, class 말고도 원하는 속성 지정 가능 -->
+    <script>
+        const img = document.querySelector('#img')
+        const src = img.getAttribute('src') //속성값 가져오기 요소 객체.getAttribute(속성이름)
+        const alttxt = img.setAttribute('alt', '버섯돌이') // 속성값 설정하기 요소 객체.setAttribute(속성이름,속성값)
+        const imgbox = img.className; // 클래스 이름 사용
+        const databox = img.getAttribute('data-num')
+        console.log(imgbox)
+        console.log(src)
+        console.log(img)
+        console.log(databox)
+        console.log(img.dataset.num) //dataset 은 data- 뒤에 오는 속성명 불러올 수 있다ㅏ.
+        console.log(img.dataset.name)
+    </script>
+</body>
+
+</html>
