@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/4.0.9/fullpage.min.css">
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/4.0.9/vendors/easings.min.js'></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/4.0.9/fullpage.min.js'></script>
+</head>
+    <style>
+        @import url(./css/reset.css);
+        .section{background-size: cover; background-position: center top; text-align: center;}
+        .section1{background-image: url(./img/samsonite/bg01.jpg);}
+        .section2{background-image: url(./img/samsonite/bg02.jpg);}
+        .section3{background-image: url(./img/samsonite/bg03.jpg);}
+
+        .section3 ul{width: 90%; margin: 20px auto 0;display: flex;justify-content: space-between;}
+        .section3 ul li{background-color: white; border-radius: 20px; padding: 10px; box-sizing: border-box; position: relative;top: 50px; opacity: 0; margin: 0 10px;}
+        /* .section3 ul li.on{top: 0; opacity: 0;} */
+        .section ul li{transition: all linear 0.3s;}
+        .section ul li:nth-child(1){transition-delay: 0.2s;}
+        .section ul li:nth-child(2){transition-delay: 0.4s;}
+        .section ul li:nth-child(3){transition-delay: 0.6s;}
+        .section ul li:nth-child(4){transition-delay: 0.8s;}
+        .section ul li:nth-child(5){transition-delay: 1s;}
+        .section3 ul li img{width: 100%;}
+
+        #header{position: fixed; top: 0;left: 0; width: 100%; height: 80px; background-color: rgba(0, 0, 0, 0.75); z-index: 2000; text-align: center;}
+        #header #gnb li{display: inline-block; line-height: 80px; width: 100px; color: #fff;} 
+        #header #gnb li.active{color: skyblue; font-weight: bold; text-decoration: underline;} 
+
+       
+
+    </style>
+<body>
+    <div id="header">
+        <ul id="gnb">
+            <li data-menuanchor="page1" class='active'><a href="#page1">메뉴1</a></li>
+            <li data-menuanchor="page2"><a href="#page2">메뉴2</a></li>
+            <li data-menuanchor="page3"><a href="#page3">메뉴3</a></li>
+        </ul>
+    </div>
+    <div id='fullpage'>
+        <div class="section section1">
+            <h1><a href="#"><img src="img/samsonite/logo.png" alt="samsonite"></a></h1>
+        </div>
+        <div class="section section2"></div>
+        <div class="section section3">
+            <h2>PRODUCT</h2>
+            <ul class='productList'>
+                <li>
+                    <a href="#">
+                        <img src="img/samsonite/bag01.jpg" alt="">
+                        <p class='item-title'>제품1</p>
+                        <p class='item-price'>5조5억</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="img/samsonite/bag02.jpg" alt="">
+                        <p class='item-title'>제품2</p>
+                        <p class='item-price'>5조5억</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="img/samsonite/bag03.jpg" alt="">
+                        <p class='item-title'>제품3</p>
+                        <p class='item-price'>5조5억</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="img/samsonite/bag04.jpg" alt="">
+                        <p class='item-title'>제품4</p>
+                        <p class='item-price'>5조5억</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="img/samsonite/bag05.jpg" alt="">
+                        <p class='item-title'>제품5</p>
+                        <p class='item-price'>5조5억</p>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <script>
+        const li = document.querySelectorAll('.productList li')
+
+         new fullpage('#fullpage', {
+            licenseKey: 'OPEN-SOURCE-GPLv3-LICENSE ',
+            autoScrolling: true,
+            scrollHorizontally: true,
+            anchors: ['page1', 'page2', 'page3', ],
+            menu: '#gnb',
+            afterLoad : function(origin, destination, direction, trigger){
+                let num = destination.index
+                if(num == 2){
+                    li.forEach((ele)=>{
+                        ele.style.top = '0px';
+                        ele.style.opacity = 1;
+                    })
+                }else{
+                    li.forEach((ele)=>{
+                        ele.style.top = '50px';
+                        ele.style.opacity = 0;
+                    })
+
+                }
+            }// afterLoad 콜백  
+
+
+        });//fullback
+    </script>
+</body>
+
+</html>
