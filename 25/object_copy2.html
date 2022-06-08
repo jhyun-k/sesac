@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const obj = {
+            name : '철수',
+            address : 'seoul',
+            hobby : {
+                a: 'game',
+                b: 'music'
+            },
+        }
+
+        let newObj = JSON.parse(JSON.stringify(obj));
+        newObj.hobby.a='book'
+        console.log(obj); // hobby.a = 'game'
+        console.log(newObj); // hobby.a = 'book'
+        
+        // stringly만 했을 때 {"name":"철수","address":"seoul","hobby":{"a":"game","b":"music"}} key 값에도 "" 붙음, 텍스트로 인식
+        // 그걸 다시 감싸서 parse 하면 json문자열이 다시 js로 변환
+
+        
+
+    </script>
+</body>
+</html>

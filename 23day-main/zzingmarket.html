@@ -21,9 +21,10 @@
         }
 
         .logo {
-            background: url('../G마켓/IMG/sprite__common.png') no-repeat 0 -152px;
-            width: 255px;
-            height: 69px;
+            background: url('../G마켓/IMG/sprite__common.png') no-repeat 0 0;
+            background-size: 400px 450px;
+            width: 146px;
+            height: 39px;
         }
 
         #search {
@@ -31,9 +32,9 @@
         }
 
         .search {
-            width: 600px;
+            width: 550px;
             border: 3px solid #067DFD;
-            height: 50px;
+            height: 45px;
             border-radius: 50px;
             margin: auto 30px;
 
@@ -60,9 +61,10 @@
 
         .mypage>a {
             display: block;
-            background: url('../G마켓/IMG/sprite__common.png') no-repeat -604px -156px;
-            width: 55px;
-            height: 55px;
+            background: url('../G마켓/IMG/sprite__common.png') no-repeat -255px -2px;
+            background-size: 400px 450px;
+            width: 34px;
+            height: 34px;
             text-indent: -9999px;
             font-size: 0;
 
@@ -71,18 +73,20 @@
 
         .recent>a {
             display: block;
-            background: url('../G마켓/IMG/sprite__common.png') no-repeat -679px -154px;
-            width: 59px;
-            height: 59px;
+            background: url('../G마켓/IMG/sprite__common.png') no-repeat -296px -1px;
+            background-size: 400px 450px;
+            width: 36px;
+            height: 36px;
             text-indent: -9999px;
             font-size: 0;
         }
 
         .cart>a {
             display: block;
-            background: url('../G마켓/IMG/sprite__common.png') no-repeat -675px -82px;
-            width: 68px;
-            height: 64px;
+            background: url('../G마켓/IMG/sprite__common.png') no-repeat -335px 0;
+            background-size: 400px 450px;
+            width: 41px;
+            height: 38px;
             text-indent: -9999px;
             font-size: 0;
         }
@@ -103,7 +107,7 @@
             font-weight: bold;
             position: absolute;
             left: 204px;
-            z-index: 12121;
+            z-index: 30001;
             position: absolute;
             left: 0;
             top: 60px;
@@ -115,6 +119,7 @@
             line-height: 50px;
             padding-left: 20px;
         }
+        .vertical-menu li:last-child{border-bottom: none;}
 
 
         .hori-menu {
@@ -138,16 +143,37 @@
 
         .menu .hori-menu ul li:first-child {
             background-color: rgb(16, 175, 41);
-            width: 180px;
+            width: 181px;
             color: white;
             font-weight: bold;
             height: 60px;
         }
 
+        .dim {
+            background-color: rgba(0, 0, 0, .55);
+            height: 100%;
+            position: absolute;
+            top: 0;
+            z-index: 30000;
+        }
+
+        .left-dimmed {
+            left: 0;
+            right: 50%;
+            margin-right: 480px;
+        }
+
+        .right-dimmed {
+            left: 50%;
+            right: 0;
+            margin-left: 480px;
+        }
+
         .mainbanner {
-            margin: auto;
-            width: 960px;
-            height: 325px;
+            height: 400px;
+            margin: 0 auto 0;
+            margin-left: -480px;
+            margin-right: -480px;
             position: relative;
         }
     </style>
@@ -161,6 +187,7 @@
                 <input class="search" type="search" name="search"><label for="search"></label>
                 <div class="search-btn"></div>
             </div>
+            <div class="ad"><img src="./G마켓/IMG/ad.jpg" alt=""></div>
             <div class="util-wrap">
                 <ul class="util">
                     <li class="mypage"><a href="#">마이페이지</a></li>
@@ -199,6 +226,8 @@
         </div>
     </div>
     <div class="mainbanner">
+        <div class='left-dimmed dim'></div>
+        <div class='right-dimmed dim'></div>
         <div class="swiper">
             <div class="swiper-wrapper">
                 <div class="swiper-slide"><img src="G마켓/IMG/banner01.jpg" alt=""></div>
@@ -209,23 +238,34 @@
             <div class="swiper-pagination"></div>
             <!-- If we need scrollbar -->
             <div class="swiper-scrollbar"></div>
+
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
         </div>
-        </div>
-        <script>
-            const swiper = new Swiper('.swiper', {
-                speed: 400,
-                spacebetween: 0,
-                loop: true,
-                pagination: {
-                    el: '.swiper-pagination',
-                },
-                autoplay: {
-                    delay: 2000,
-                },
+    </div>
+    <script>
+        const swiper = new Swiper('.swiper', {
+            speed: 400,
+            spacebetween: 0,
+            slidesPerView: 3,
+            loop: true,
+
+            pagination: {
+                el: '.swiper-pagination',
+                type: 'bullets',
+                clickable: true,
+            },
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+            autoplay: {
+                delay: 2000,
+            },
 
 
-            });
-        </script>
+        });
+    </script>
 </body>
 
 </html>
