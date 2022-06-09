@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <style>
+        div {
+            width: 500px;
+            height: 300px;
+            margin: 50px auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 50px;
+            background-color: lemonchiffon;
+        }
+    </style>
+</head>
+
+<body>
+    <div data-aos="fade-down" data-aos-easing="linear" data-aos-duration="1500">페이드다운
+    </div>
+    <div data-aos="fade-up" data-aos-duration="3000">
+        페이드업</div>
+    <div data-aos="fade-right" data-aos-offset="300" data-aos-easing="ease-in-sine">페이드right
+    </div>
+    <div data-aos="fade-left" data-aos-anchor="#example-anchor" data-aos-offset="500" data-aos-duration="500">페이드left
+    </div>
+    <div data-aos="fade-zoom-in" data-aos-easing="ease-in-back" data-aos-delay="300" data-aos-offset="0">줌인
+    </div>
+    <div data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-duration="2000"> 플립left
+    </div>
+
+
+    <script>
+        AOS.init({
+            duration:1000
+        });
+    </script>
+
+</body>
+
+</html>
