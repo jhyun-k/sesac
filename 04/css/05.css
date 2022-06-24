@@ -1,0 +1,19 @@
+.header{height: 100px; border-bottom: 1px solid #999 ;}
+.inner{width: 1200px; margin: auto;}
+.inner h1{float: left; font-size: 36px; font-weight: bold; margin: 0;}
+.inner .social{ width: 1200px; } 
+.inner .social>li{float: right; height: 100px;}
+.inner .menu{position: relative; left: -90px;}
+.inner .menu>li{float: left;margin-top: 80px;margin-right: 10px;}
+
+
+.mainbanner{height: 500px;background-image: url(../img/nell/main.jpeg); background-size: auto; background: no-repeat;}
+.mainbanner>h2{display: none;}
+.subtitle{border-bottom: 1px solid #999;}
+
+.subinner{width: 900px; margin: auto;}
+.subinner>h2{font-size: 18px;}
+
+
+.gallery{width: 1000px; margin: auto;}
+.gallery>div{float: left; margin-top: 30px; margin-left: 10px; margin-bottom: 10px;}

@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>표 만들기 연습</title>
+    <style>
+        .bbs1{width: 500px; height: 300px;}
+        .bbs1,.bbs1 td{border: 1px solid black }
+
+        .timetable{width: 700px; height: 400px; border: 1px solid #333;}
+        .timetable td,.timetable th{border: 1px solid #333;}
+
+        .browser{width: 700px;border: 1px solid black; border-collapse: collapse;}
+        .browser td, .browser th{border: 1px solid black;text-align: center;}
+
+        .menu{width: 700px; border: 1px solid black; text-align: center;}
+        .menu td,.menu th{border: 1px solid black;}
+        .menu thead{background-color: tan; color: orangered;}
+    </style>
+</head>
+<body>
+    <table class="bbs1">
+        <tbody>
+        <caption>표 연습</caption>
+            <tr> <!-- 1행 -->
+                <td>1열</td>
+                <td>2열</td>
+                <td>3열</td>
+            </tr
+            ><tr> <!-- 2행 -->
+                <td>1</td>
+                <td>2</td>
+            </tr>
+            <tr> <!-- 3행 -->
+                <td>1</td>
+                <td>2</td>
+            </tr>
+        </tbody>
+    </table>
+   
+    <table class="timetable">
+        <caption>시간표</caption>
+        <thead>
+            <tr> <!--행 th로 여러개-->
+                <th scope="col">월</th>
+                <th scope="col">화</th>
+                <th scope="col">수</th>
+                <th scope="col">목</th>
+                <th scope="col">금</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td colspan="2"></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                
+            </tr>
+            <tr>
+                <td colspan="5"></td>
+                
+            </tr> 
+            <tr>
+                <td rowspan="2"></td>
+                <td></td>
+                <td colspan="2"></td>
+                <td rowspan="3"></td>
+                
+              
+            </tr> 
+            <tr>
+                
+                <td></td>
+                <td></td>
+                <td></td>
+                
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                
+            </tr>
+        </tbody>
+    </table>
+
+    <table class="browser">
+        <caption>
+            <strong>Modern Browser</strong>
+            <p>국내에서 자주 사용하는 모던 브라우저</p>
+        </caption>
+        <thead>
+        <tr>
+            <th scope="col">브라우저</th>
+            <th scope="col">제조업체</th>
+            <th scope="col">다운로드</th>
+        </tr>
+        </thead>
+        <tbody>    
+        <tr>
+            <td><b>크롬</b></td>
+            <td>goolge</td>
+            <td>구글주소</td>`
+        </tr>
+        <tr>
+            <td><B>파이어폭스</B></td>
+            <td>firefox</td>
+            <td>파이어폭스주소</td>
+        </tr>
+        <tr>
+            <td><B>엣지</B></td>
+            <td>EDGE</td>
+            <td>엣지주소</td>
+        </tr>
+    </tbody>
+    </table>
+
+    <br>
+    <br>
+
+    <table class="menu">
+        <caption>테이크아웃커피 비교대상 제품</caption>
+        <colgroup>
+            <col>
+            <col style="background-color: darkorange;">
+            <col style="background-color: goldenrod; width: 200px;">
+            <col style="background-color: skyblue; width: 200px; height: auto;">
+        </colgroup>
+        <thead>
+            <th scope="col" colspan="2">분류</th>
+            <th scope="col">브랜드명</th>
+            <th scope="col">기본사이즈</th>
+            <th scope="col">제품명</th>
+            <th scope="col">가격(원)</th>
+        </thead>
+        <tbody> 
+            <tr>
+                <th scope="row" rowspan="2">해외커피브랜드</th>
+                <th>미국</th>
+                <td>스타벅스</td>
+                <td>Tall</td>
+                <td>카페아메리카노</td>
+                <td>3,900</td>
+                
+            </tr>
+            <tr>
+                <th>이탈리아</th>
+                <td>커피빈</td>
+                <td>Small</td>
+                <td>아메리카노</td>
+                <td>4,300</td>
+            </tr>
+            <tr>
+                <th scope="row" rowspan="4" colspan="2">국내커피브랜드</th>
+                <td>엔제리너스커피</td>
+                <td>Small</td>
+                <td>아메리카노</td>
+                <td>3,600</td>
+            </tr>
+            <tr>
+                <td>이디야 커피</td>
+                <td>One Size</td>
+                <td>아메리카노</td>
+                <td>2,500</td>
+            </tr>
+            <tr>
+                <td>카페베네</td>
+                <td>Regular</td>
+                <td>아메리카노</td>
+                <td>3,800~4,500</td>
+            </tr>
+            <tr>
+                
+                <td>탐앤탐스</td>
+                <td>Tall</td>
+                <td>아메리카노</td>
+                <td>3,600</td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>

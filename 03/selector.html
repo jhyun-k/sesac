@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul>
+        <li>1</li> <!--li:nth-child(1)-->
+        <li>2</li> <!--li:nth-child(2)-->
+        <li>3</li>
+        <li>4</li>
+    </ul>
+    <dl>
+        <dt>제목</dt> <!--dt:nth-child(1)-->
+        <dd>내용</dd> <!--dd:nth-child(2) <부모 기준이기 때문에 dd 1번이어도 (2)임--> 
+        <dd>내용</dd> <!-- dd:nth-of-type(2) <얘는 같은 타입 중 몇 번째인지 dd 중 2번이니까 (2)-->
+        <dd>내용</dd>
+        <dd>내용</dd>
+        <dd>내용</dd>
+    </dl>
+    <h2>오늘은 0504일</h2>
+    <p>css 선택자</p>
+</body>
+</html>

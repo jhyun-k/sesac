@@ -1,0 +1,86 @@
+/* 메인 */
+.mainbanner{height: 653px; background: url(../img/main/mainbanner1.png) no-repeat center / cover;text-indent: -9999px; font-size: 0;}
+
+/* NEW */
+.product-new{height: 610px;background-color:#fffef2;}
+.product-new h2{font-size: 40px; font-weight: bold; font-family: 'Philosopher', sans-serif;text-align: center;padding-top: 130px; padding-bottom: 55px;}
+.product-new .inner ul li{float: left; margin: 0 0 0 20px}
+.new>li>a{width: 229px; height: 229px; display: block; text-indent: -9999px; font-size: 0}
+.new>li>p{text-align: center;}
+.new>li:nth-child(1){background:url(../img/main/new-1.png) no-repeat;}
+.new>li:nth-child(2){background:url(../img/main/new-2.png) no-repeat;}
+.new>li:nth-child(3){background:url(../img/main/new-3.png) no-repeat;}
+.new>li:nth-child(4){background:url(../img/main/new-4.png) no-repeat;}
+.new>li:nth-child(5){background:url(../img/main/new-5.png) no-repeat;}
+
+.new>li>p:nth-of-type(1){font-size: 12px;line-height: 21px;}
+.new>li>p:nth-of-type(2){font-size: 14.5px; line-height: 21px;}
+.new>li>p:nth-of-type(3){font-size: 13.5px; line-height: 38px}
+
+/*베스트*/
+.product-best{height: 672px; background-color: #465a4f;}
+.product-best h2{font-size: 40px; font-weight: bold; font-family: 'Philosopher', sans-serif;text-align: center;padding-top: 109px;padding-bottom: 59px; color: #fff;}
+.best>li{float: left;}
+
+.best>li>p{text-align: center; color: #fff;}
+.best>li>a{width: 280px; height: 280px; display: block; text-indent: -9999px; font-size: 0;}
+.best>li:nth-child(1){background:url(../img/main/best1.png) no-repeat;}
+.best>li:nth-child(2){background:url(../img/main/best2.png) no-repeat;}
+.best>li:nth-child(3){background:url(../img/main/best3.png) no-repeat;}
+.best>li:nth-child(4){background:url(../img/main/best4.png) no-repeat;}
+
+.best>li>p:nth-of-type(1){font-size: 18px;line-height: 21px;line-height: 45px;}
+.best>li>p:nth-of-type(2){font-size: 16px;line-height: 21px;line-height: 45px;}
+.best>li>p:nth-of-type(3){font-size: 16px;line-height: 21px;line-height: 20px;}
+
+.best li{margin: 0 0 95px 28px;}
+.product-best .inner{padding-top: 0;}
+
+/*차별점*/
+.product-different{background-color:#fffef2;}
+.product-different h2{font-size: 40px; font-weight: bold; font-family: 'Philosopher', sans-serif;text-align: center;padding-top: 130px; padding-bottom: 55px}
+
+.diff>li{float: left;}
+.diff>li>p{text-align: center; line-height: 28px; font-size: 16px;font-family: 'Noto Sans KR', sans-serif;}
+.diff>li>p:nth-of-type(1){font-size: 18px; margin-top: 56px;}
+
+.diff li{margin: 0 40px 80px 40px;}
+
+
+
+/* 스토어 */
+.store{height: 655px; background-color: #f8f6e5; position: relative;}
+
+.store .right-bg{position:absolute; left: 50%; top: 0; height: 655px; width: 50%; background-color: #f8f6e5;}
+.store .inner{ position: relative;}
+.store .store-left{width: 50%; height: 655px;float: left; padding-top: 128px; box-sizing: border-box; padding-left: 37px;}
+.store .store-left h2{font-size: 40px; color: #464646;font-weight:700; font-family : 'Philosopher',sans-serif;;}
+.store .store-left p:nth-of-type(1){font-size: 38px; color: #333; font-weight: 700; margin-bottom: 30px;}
+.store .store-left p:nth-of-type(2){font-size: 18px; color: #666; font-weight: 600; margin-bottom: 21px;}
+.store .store-left p:nth-of-type(3){font-size: 21px;line-height: 36px; color: #666; font-weight: 500; margin-top: 54px;}
+
+.store .store-left .new-store-more{display: block; width: 220px; height: 60px; color: #fff; font-size: 14px; line-height: 60px; background-color: #465a4f; margin-left: 146px; margin-top: 79px; text-align: center;}
+
+.store .store-right{width: 50%; height: 655px; float: left; padding-right: 58px; padding-top: 69px; box-sizing: border-box;}
+
+.store .store-right .slide-control{margin-top: 46px; margin-left: 15px;}
+.store .store-right .slide-control button{float: left; text-indent: -9999px; font-size: 0; width: 49px; height: 15px;}
+.store .store-right .slide-prev-btn{background: url(../img/main/prev-arrow.png) no-repeat; margin-right: 44px;}
+.store .store-right .slide-next-btn{background: url(../img/main/next-arrow.png) no-repeat;}
+
+/*sns*/
+
+.sns{background-color:#fffef2;}
+.sns h2{font-size: 40px; font-weight: bold; font-family: 'Philosopher', sans-serif;text-align: center;padding-top: 193px; padding-bottom: 66.2px}
+
+.sns li{float: left;}
+.sns li>p{text-align: center; line-height: 28px; font-size: 24px;font-family: 'Noto Sans KR', sans-serif;padding-top: 31.7px; padding-bottom: 109px;}
+
+.sns li{margin: 0 -10px 0px 37px;}
+
+/*comment*/
+
+.comment{height: 907px; background-color: #85918a;z-index: 1;}
+
+.comment h2{text-align: center;}
+.comment h2>img{padding-top: 203px;}

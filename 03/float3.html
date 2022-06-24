@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{margin: 0; padding: 0;}
+        .wrap{width: 1655px; height: 1140;background-color:lightgray;margin: auto;}
+        .header,.footer{width: 1655px; height: 100px; background-color: navy;}
+        .mainbanner{height: 500px;background-color: bisque;}
+        .container{height: 400px;padding: 20px; background-color: burlywood; }
+        .contentbox{width: 960px;margin: auto; height: 400px;}
+        .contentbox>div{width: 307px; height: 400px; float: left;}
+        .contentbox>.leftbox{background-color: aquamarine;}
+        .contentbox>.centerbox{background-color: blueviolet; margin: 0 20px; width: 306px;}
+        .contentbox>.rightbox{background-color: coral;}
+
+
+        
+        .container>.box1{width: 1655px;height: 500px; background-color: darkslateblue;}
+        .container>.box2{height: 500px; background-color: beige;}
+        .container>.box2>.leftbox{width: 307px; height: 400px; background-color: aquamarine;float: left; margin: 20px auto;}
+        .container>.box2>.centerbox{width: 307px; height: 400px; background-color: blueviolet; margin: 20px auto;}
+        .container>.box2>.rightbox{width: 307px; height: 400px; background-color: brown; float: right;margin-top: 20px auto; margin-bottom: 20px auto}
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <div class="header"></div>
+        <div class="mainbanner"></div>
+        <div class="container">
+             <div class="contentbox">
+                <div class="leftbox"></div>
+                <div class="centerbox"></div>
+                <div class="rightbox"></div>
+            </div>
+        </div>
+        <div class="footer"></div>
+    </div>
+</body>
+</html>

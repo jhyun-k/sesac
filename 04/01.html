@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* li:nth-child(1){float: left;}
+        li:nth-child(2){float: left;}
+        li:nth-child(3){clear: both;} */
+
+        *{margin: 0; padding: 0;}
+        li{list-style: none;}
+
+        div{width: 400px; height: 100px; border: 1px solid red; margin: 100px;}
+        div:nth-child(1){overflow: hidden;}
+        div:nth-child(2){overflow: scroll;}
+        div:nth-child(3){overflow: auto;}
+        div:nth-child(4){overflow: visible;} /* 기본값 */
+
+        ul{width: 500px; background-color: rebeccapurple; }
+        ul>li{width: 100px; height: 100px; background-color: blue; float: left;}
+        .clearfix::after{content: ''; clear: both; display: block;}
+    </style>
+</head>
+<body>
+    <ul class="clearfix">
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        
+    </ul>
+
+    <div>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque debitis est, nobis ab amet dignissimos? Sit repudiandae odio iste odit dolor dolore autem fugiat est, magni voluptates aliquid excepturi itaque. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ducimus animi perspiciatis consequuntur enim pariatur minus quaerat facilis reiciendis assumenda. Assumenda illo inventore accusantium quia beatae unde reprehenderit esse consectetur aspernatur?
+    </div>
+    <div>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque debitis est, 
+    </div>
+    <div>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque debitis est, nobis ab amet dignissimos? Sit repudiandae odio iste odit dolor dolore autem fugiat est, magni voluptates aliquid excepturi itaque. 
+    </div>
+    <div>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque debitis est, nobis ab amet dignissimos? Sit repudiandae odio iste odit dolor dolore autem fugiat est, magni voluptates aliquid excepturi itaque. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ducimus animi perspiciatis consequuntur enim pariatur minus quaerat facilis reiciendis assumenda. Assumenda illo inventore accusantium quia beatae unde reprehenderit esse consectetur aspernatur?
+    </div>
+</body>
+</html>

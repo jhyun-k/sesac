@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #userid{width: 150px; height: 50px;}
+        .first{background: rosybrown;}
+    </style>
+    
+</head>
+<body>
+    <form name="frm1" >
+        <fieldset class="first"><!--비슷한 것 끼리 묶어줌 웹 접근성 측면에서는 넣는게 맞지만 꼭 있어야하는건 아님-->
+            <legend>회원가입 정보</legend>
+            <ul>
+                <li>
+                    <label for="userid">아이디</label><input type="text" id="userid" placeholder="아이디를 넣어주세요" maxlength="5" autocomplete="off">
+                </li>
+                <li>
+                    <label for="userpw">비밀번호</label>
+                    <input type="password" id="userpw" required maxlength="7" placeholder="비밀번호" autofocus>
+                </li>
+                <li>
+                    <label for="file">파일추가</label>
+                    <input type="file" id="file">
+                </li>
+                <li>
+                    <label for="usermail">이메일</label>
+                    <input type="email" id="usermail" placeholder="이메일">
+                </li>
+                <input type="date" name="" id="">
+                <input type="week" name="" id="">
+                <input type="time" name="" id="">
+                <input type="range" name="" id="">
+                <input type="radio" name="" id="">
+                <input type="checkbox" name="" id="">
+                <input type="submit" name="" id="">
+                <input type="url" name="" id="" placeholder="url">
+                <input type="tel" name="" id="" placeholder="전화번호">
+                <input type="button" value="버튼" name="" id="" placeholder="버튼">
+                <input type="search" name="" id="" placeholder="검색">
+            </ul>
+        </fieldset>
+        <fieldset>
+            <legend>신청과목</legend>
+            <input type="radio" name="" id="math" value="math"><label for="math">수학</label>
+            <input type="radio" name="" id="eng"value="eng"><label for="eng">영어</label>
+            <input type="radio" name="" id="kor"value="kor"><label for="kor">국어</label>
+        </fieldset>
+        <fieldset>
+            <legend>관심분야</legend>
+            <input type="checkbox" name="" id="movie" value="math"><label for="movie">영화</label>
+            <input type="checkbox" name="" id="book" value="book" checked><label for="book">책</label>
+            <input type="checkbox" name="" id="exe" value="exe"><label for="exe">운동</label>
+        </fieldset>
+        <fieldset>
+            <legend>선택</legend>
+            <label for="select1">개수</label>
+            <select name="" id="select1">
+                <option value="10">10개</option>
+                <option value="20">20개</option>
+                <option value="30">30개</option>
+                <option value="40">40개</option>
+            </select>
+            <select>
+                <optgroup label="이과">
+                    <option value="math">수학</option>
+                    <option value="sci">과학</option>
+                    <option value="bio">생물</option>
+                </optgroup>
+                <optgroup label="문과">
+                    <option value="soc">사회</option>
+                    <option value="ko">국어</option>
+                    <option value="eng">영어</option>
+                </optgroup>
+            </select>
+        </fieldset>
+        <input type="submit" value="제출하기">
+        <input type="reset" value="취소하기">
+        <input type="button" value="버튼">
+        <button>버튼</button>
+        <textarea name="지원동기" id="" cols="30" rows="10"></textarea>
+    </form>
+</body>
+</html>
