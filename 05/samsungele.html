@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>삼성전기</title>
+    <link rel="stylesheet" href="css/reset.css">
+</head>
+    <style>
+        .gnb{width: 1200px; margin: auto;}
+        .list{width:700px ; height: 70px; margin: 30px auto;}
+        .depth1{float: left; width: 140px ; margin: auto; position: relative;}
+        .depth1:hover>.depth2{display: block;}
+        .depth2{float: left; width: 140px;background-color: #e3dfdf; position: absolute; top: 80px; text-align: center; margin-top: 20px;  }
+        .depth2>li{height: 60px; line-height: 60px; text-align: center;}
+        .depth1>a{display: block; height: 70px; line-height: 70px; text-align: center; font-size: 20px; font-weight: bold;}
+        .depth1 a::after{content: ''; display: block; height: 4px;width: 0; background-color: navy; position: absolute; left: 50%; top: 60px; transform:translateX(-50%);}
+        .depth1:hover>a{color: navy;}
+        li:hover>a::after{width: 90px; transition: width .45s;}
+       
+
+
+
+    </style>
+<body>
+    <div class="gnb">
+    <ul class="list cf">
+       <li class="depth1"><a href="#">기업정보</a></li> 
+            <ul class="depth2 ">
+               <li><a href="#">기업소개</a></li> 
+               <li><a href="#">삼성전기소개</a></li> 
+               <li><a href="#">ceo인사말</a></li> 
+               <li><a href="#">연혁</a></li> 
+               <li><a href="#">수상실적</a></li> 
+               <li><a href="#">사업장소개</a></li> 
+            </ul>
+       <li class="depth1"><a href="#">인재채용</a></li> 
+       <li class="depth1"><a href="#">뉴스룸</a></li> 
+       <li class="depth1"><a href="#">제품정보</a></li> 
+       <li class="depth1"><a href="#">고객지원</a></li> 
+    </ul>
+    </div>  
+</body>
+</html>
